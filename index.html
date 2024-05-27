@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .main {
+            margin: 0;
+            /* border: 1px solid black; */
+            /* height: 635px; */
+            width: 900px;
+
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        button {
+            height: 30px;
+            width: 35px;
+            border: 1px solid blue;
+            background-color: pink;
+            color: brown;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        /* button:focus {
+            color: red;
+            background-color: black;
+        } */
+
+        #dropdown {
+            height: 30px;
+            background-color: pink;
+            border: 1px solid blue;
+            color: brown;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        #dropdown:focus {
+            background-color: black;
+            color: white;
+        }
+
+        #text {
+            display: flex;
+            justify-content: center;
+        }
+
+        textarea {
+            background-color: white;
+            color: black;
+            border: 2px solid green;
+            outline: none;
+            font-size: 15px;
+        }
+
+        textarea:focus {
+            border: 5px solid red;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .strikethrough {
+            text-decoration: line-through;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .lowercase {
+            text-transform: lowercase;
+        }
+
+        .capitalize {
+            text-transform: capitalize;
+        }
+        .small{
+            font-size: small;
+        }
+        .medium{
+            font-size: medium;
+        }
+        .large{
+            font-size: large;
+        }
+        .x-large{
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="buttons">
+            <button id="btn1" onclick="bold()" class="bold"><i class="fa-solid fa-bold"></i></button>
+            <button id="btn2" onclick="italic()"><i class="fa-solid fa-italic"></i></button>
+            <button id="btn3" onclick="underline()"><i class="fa-solid fa-underline"></i></button>
+            <button id="btn7" onclick="strikeThrough()"><s>abc</s></button>
+            <button id="btn4" onclick="upperCase()">AA</button>
+            <button id="btn5" onclick="lowerCase()">aa</button>
+            <button id="btn6" onclick="capitalize()">Aa</button>
+            <!-- <select id="dropdown" onclick="size()">
+                <option disabled selected>none</option>
+                <option>small</option>
+                <option>medium</option>
+                <option>large</option>
+                <option>x-large</option>
+            </select> -->
+        </div>
+        <div id="text">
+            <textarea id="textarea" class="" rows="33" cols="80"></textarea>
+        </div>
+
+        <script>
+
+            // function format(param = null) {
+            //     var textArea = document.getElementById('textarea')
+            //     var form = format.toString()
+            //     console.log(form);
+            //     var btn = document.getElementById();
+            //     console.log(btn);
+            //     // btn.classList.add('btn_highlight')
+            //     if(textArea.classList.contains(param)){
+            //         textArea.classList.remove(param)
+            //     }
+
+            //     textArea.classList.add(param)
+            //     //textArea.classList.add('bold')    
+            // }
+            var textArea = document.getElementById('textarea')
+             var opt = document.getElementById('dropdown')
+            function bold(){
+                textArea.innerText = textArea.className += ' bold'
+            }
+            function italic(){
+                textArea.innerText = textArea.className += ' italic'
+            }
+            function underline(){
+                textArea.innerText = textArea.className += ' underline'
+            }
+            function strikeThrough(){
+                textArea.innerText = textArea.className += ' strikethrough'
+            }
+            function upperCase(){
+                textArea.innerText = textArea.className += ' uppercase'
+            }
+            function lowerCase(){
+                textArea.innerText = textArea.className += ' lowercase'
+            }
+            function capitalize(){
+                textArea.innerText = textArea.className += ' capitalize'
+            }
+            // function size(){
+            //     if(opt == 'small'){
+            //         textArea.innerText = textArea.className += ' small'
+            //     }
+            //     else if(opt == 'medium'){
+            //         textArea.innerText = textArea.className += ' medium'
+
+            //     }
+            //     else if(opt == 'large'){
+            //         textArea.innerText = textArea.className += ' large'
+
+            //     }
+            //     else if(opt == 'x-large'){
+            //         textArea.innerText = textArea.className += ' x-large'
+
+            //     }
+            //     else{
+            //         textArea.innerText = 'press any button'
+            //     }
+            // }
+        </script>
+</body>
+
+</html>
